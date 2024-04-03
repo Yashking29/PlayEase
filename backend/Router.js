@@ -1,9 +1,10 @@
 import express from 'express';
 
+
 const router=express.Router();
 
-
-router.get('/',(req,res)=>{
+// My version
+router.get('/',(req,res)=>{       
 
       function generateNumber() {
             // Generate a random number between 0 and 1
@@ -32,5 +33,13 @@ router.get('/',(req,res)=>{
       res.json({data:randomValue});
 
 })
+
+
+// Not my version Aksaht Version
+// router.get('/',(req,res)=>{
+//     const result = get_result(generateRandomHash());
+//     console.log(result);
+//     res.json({data:result});
+// })
 
 export {router};
